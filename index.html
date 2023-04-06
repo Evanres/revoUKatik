@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>KATIK</title>
+
+    <link rel="stylesheet"
+          href="index.css">
+</head>
+
+<body>
+    <h1 class="text-center">Welcome to Katik</h1>
+    <p class="text-center flex flex-col">
+        <span>Hai sobat, Selamat datang di Katik 😀</span>
+        <span>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</span>
+    </p>
+
+    <main>
+        <ul id="nav-menus">
+            <li data-nav="segitiga"
+                class="nav-menus-list nav-active">
+                <a href="#">Segitiga</a>
+            </li>
+            <li data-nav="jajar-genjang"
+                class="nav-menus-list">
+                <a href="#">Jajar Genjang</a>
+            </li>
+        </ul>
+
+        <div id="segitiga"
+             class="menu-wrapper hidden nav-active">
+            <div class="menu-header">
+                <h2 class="text-center text-white text-xl">Luas Segitiga</h2>
+            </div>
+
+            <div class="menu-content">
+                <ul id="menu-tabs">
+                    <li tab-info="luas-segitiga"
+                        class="menu-tabs-list">
+                        <a href="#">Luas</a>
+                    </li>
+                    <li tab-info="keliling-segitiga"
+                        class="menu-tabs-list">
+                        <a href="#">Keliling</a>
+                    </li>
+                </ul>
+
+                <div class="full-width flex justify-center my-4">
+                    <img src="assets/segitiga.jpg"
+                         alt="segitiga">
+                </div>
+
+                <div id="luas-segitiga"
+                     class="hidden">
+                    <p>Rumus Luas Segitiga yaitu :</p>
+                    <p class="text-center font-bold">L = 1/2 x a x t</p>
+                    <p class="flex flex-col">
+                        <span>Di mana : </span>
+                        <span>L = Luas</span>
+                        <span>a = Panjang Alas</span>
+                        <span>t = Tinggi</span>
+                    </p>
+
+                    <hr class="full-width horizontal-line my-8">
+
+                    <h3 class="my-4 text-center font-bold text-xl">Hitung Luas Segitiga</h3>
+
+                    <form action=""
+                          id="form-luas-segitiga">
+                        <input type="number"
+                               id="alas-segitiga"
+                               class="form-input"
+                               placeholder="Nilai Alas"
+                               required>
+                        <input type="number"
+                               id="tinggi-segitiga"
+                               class="form-input"
+                               placeholder="Nilai Tinggi"
+                               required>
+
+                        <p id="hasil-luas-segitiga"
+                           class="flex flex-col"></p>
+
+                        <div class="text-center my-4">
+                            <button class="btn btn-lg btn-primary"
+                                    type="submit">Hitung</button>
+                        </div>
+
+                        <div class="text-right">
+                            <button class="btn btn-warning"
+                                    type="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="keliling-segitiga"
+                     class="hidden">
+                    <p>Rumus Keliling Segitiga yaitu :</p>
+                    <p class="text-center font-bold">K = S1 + S2 + S3</p>
+                    <p class="flex flex-col">
+                        <span>Di mana : </span>
+                        <span>K = Keliling</span>
+                        <span>S1 = Sisi A</span>
+                        <span>S2 = Sisi B</span>
+                        <span>S3 = Sisi C</span>
+                    </p>
+
+                    <hr class="full-width horizontal-line my-8">
+
+                    <h3 class="my-4 text-center font-bold text-xl">Hitung Keliling Segitiga</h3>
+
+                    <form action=""
+                          id="form-keliling-segitiga">
+                        <input type="number"
+                               id="sisi-a-segitiga"
+                               class="form-input"
+                               placeholder="Nilai Sisi A"
+                               required>
+                        <input type="number"
+                               id="sisi-b-segitiga"
+                               class="form-input"
+                               placeholder="Nilai Sisi B"
+                               required>
+                        <input type="number"
+                               id="sisi-c-segitiga"
+                               class="form-input"
+                               placeholder="Nilai Sisi C"
+                               required>
+
+                        <p id="hasil-keliling-segitiga"
+                           class="flex flex-col"></p>
+
+                        <div class="text-center my-4">
+                            <button class="btn btn-lg btn-primary"
+                                    type="submit">Hitung</button>
+                        </div>
+
+                        <div class="text-right">
+                            <button class="btn btn-warning"
+                                    type="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="jajar-genjang"
+             class="menu-wrapper hidden">
+            <div class="menu-header">
+                <h2 class="text-center text-white text-xl">Jajar Genjang</h2>
+            </div>
+
+            <div class="menu-content">
+                <ul id="menu-tabs">
+                    <li tab-info="luas-jajar-genjang"
+                        class="menu-tabs-list">
+                        <a href="#">Luas</a>
+                    </li>
+                    <li tab-info="keliling-jajar-genjang"
+                        class="menu-tabs-list">
+                        <a href="#">Keliling</a>
+                    </li>
+                </ul>
+
+                <div class="full-width flex justify-center my-4">
+                    <img src="assets/jajar-genjang.jpg"
+                         alt="jajar genjang">
+                </div>
+
+                <div id="luas-jajar-genjang"
+                     class="hidden">
+                    <p>Rumus Luas Jajar Genjang yaitu :</p>
+                    <p class="text-center font-bold">L = a x t</p>
+                    <p class="flex flex-col">
+                        <span>Di mana : </span>
+                        <span>L = Luas</span>
+                        <span>a = Panjang Alas</span>
+                        <span>t = Tinggi</span>
+                    </p>
+
+                    <hr class="full-width horizontal-line my-8">
+
+                    <h3 class="my-4 text-center font-bold text-xl">Hitung Luas Jajar Genjang</h3>
+
+                    <form action=""
+                          id="form-luas-jajar-genjang">
+                        <input type="number"
+                               id="alas-jajar-genjang"
+                               class="form-input"
+                               placeholder="Nilai Alas"
+                               required>
+                        <input type="number"
+                               id="tinggi-jajar-genjang"
+                               class="form-input"
+                               placeholder="Nilai Tinggi"
+                               required>
+
+                        <p id="hasil-luas-jargen"
+                           class="flex flex-col"></p>
+
+                        <div class="text-center my-4">
+                            <button class="btn btn-lg btn-primary"
+                                    type="submit">Hitung</button>
+                        </div>
+
+                        <div class="text-right">
+                            <button class="btn btn-warning"
+                                    type="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="keliling-jajar-genjang"
+                     class="hidden">
+                    <p>Rumus Keliling Jajar Genjang yaitu :</p>
+                    <p class="text-center font-bold">K = 2 x (S1 + S2) </p>
+                    <p class="flex flex-col">
+                        <span>Di mana : </span>
+                        <span>K = Keliling</span>
+                        <span>S1 = Sisi Miring</span>
+                        <span>S2 = Sisi Sejajar</span>
+                    </p>
+
+                    <hr class="full-width horizontal-line my-8">
+
+                    <h3 class="my-4 text-center font-bold text-xl">Hitung Keliling Jajar Genjang</h3>
+
+                    <form action=""
+                          id="form-keliling-jajar-genjang">
+                        <input type="number"
+                               id="sisi-1-jajarGenjang"
+                               class="form-input"
+                               placeholder="Nilai Sisi A"
+                               required>
+                        <input type="number"
+                               id="sisi-2-jajarGenjang"
+                               class="form-input"
+                               placeholder="Nilai Sisi B"
+                               required>
+
+                        <p id="hasil-keliling-jargen"
+                           class="flex flex-col"></p>
+
+                        <div class="text-center my-4">
+                            <button class="btn btn-lg btn-primary"
+                                    type="submit">Hitung</button>
+                        </div>
+
+                        <div class="text-right">
+                            <button class="btn btn-warning"
+                                    type="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
